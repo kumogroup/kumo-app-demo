@@ -1,0 +1,332 @@
+/*
+** Kumo Mobile Web App
+** version 1.0.0
+** create Date 21/11/2017
+** Last Update 06/01/2018
+*/
+
+@media screen and (min-width: 320px){
+	
+	/***********************
+	All page
+	***********************/
+	@font-face {
+		font-family: "Quicksand";
+		font-style: normal;
+		font-weight: 400;
+		src: url(../font/Quicksand-Regular.ttf);
+	}
+	@font-face {
+		font-family: "Quicksand";
+		font-style: normal;
+		font-weight: 700;
+		src: url(../font/Quicksand-Bold.ttf);
+	}
+	body{
+		margin: 0;
+	}
+	#pagewrap{
+		font-family: "Quicksand", sans-serif;
+		font-size: 13px;
+		background: #f5f5f5;
+		color: #222;
+		overflow: hidden;
+	}
+	a{
+		color: #222;
+		text-decoration: none;
+		pointer-events: none;
+		cursor: none;
+	}
+	img{
+		max-width: 100%;
+	}
+	.loading{
+		background: #fff;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		position: fixed;
+		top: 0;
+		bottom: 0;
+		left: 0;
+		right: 0;
+		z-index: 9999;
+	}
+	.loader {
+		border: 5px solid #f1f1f1;
+		border-radius: 50%;
+		border-top: 5px solid #6cbe02;
+		width: 30px;
+		height: 30px;
+		-webkit-animation: spin 2s linear infinite; /* Safari */
+		animation: spin 2s linear infinite;
+	}
+	/* Safari */
+	@-webkit-keyframes spin {
+		0% { -webkit-transform: rotate(0deg); }
+		100% { -webkit-transform: rotate(360deg); }
+	}
+
+	@keyframes spin {
+		0% { transform: rotate(0deg); }
+		100% { transform: rotate(360deg); }
+	}
+
+	/***********************
+	Header
+	***********************/
+	#header{
+		/*height: 50px;*/
+		box-shadow: 0 0 5px 0 #ccc, 0 0 5px 0 #ccc;
+		position: fixed;
+		top: 0;
+		left: 0;
+		right: 0;
+		background: #fff;
+		padding: 10px;
+	}
+	
+	/* cong cu */
+	.congcu{
+		display: flex;
+	}
+	.congcu .timkiem{
+		width: 100%;
+	}
+	.congcu .timkiem input{
+		border: 1px solid #f1f1f1;
+		background: url('../img/search.png') left 5px center no-repeat #f1f1f1;
+		background-size: 18px;
+		padding: 6px 5px 5px 30px;
+		outline: 0;
+		border-radius: 3px;
+		box-sizing: border-box;
+		font: 13px normal Quicksand;
+		line-height: 1.5;
+		width: 100%;
+	}
+	.congcu .giohang,
+	.congcu .hotro{
+		font-size: 0;
+	}
+	.congcu .giohang{
+		margin: 0px 10px;
+		position: relative;
+	}
+	.congcu .giohang a:before{
+		content: attr(item);
+		display: block;
+		font-size: 13px;
+		font-weight: bold;
+		text-align: center;
+		background: #FE5421;
+		padding: 0 3px;
+		min-width: 18px;
+		color: #fff;
+		border-radius: 3px;
+		position: absolute;
+		top: 0;
+		right: 0;
+	}
+	.congcu .giohang a,
+	.congcu .hotro a{
+		display: block;
+		width: 32px;
+		height: 32px;
+	}
+	.congcu .giohang a{
+		background: url('../img/cart.png') left center no-repeat;
+		padding: 0 0 0 5px;
+	}
+	.congcu .hotro a{
+		background: url('../img/chat.png') center no-repeat;
+	}
+	
+	/***********************
+	Slide
+	***********************/
+	#slide{
+		margin-top: 52px;
+		font-size: 0;
+		padding: 10px 0;
+		overflow-x: scroll;
+		background: #fff;
+		margin-bottom: 5px;
+	}
+	.slide-scroll{
+		width: 790px;
+	}
+	.slide-item{
+		float: left;
+		padding: 0 5px;
+		overflow: hidden;
+		max-width: 250px;
+	}
+	.slide-item:first-child{
+		padding-left: 10px;
+	}
+	.slide-item:last-child{
+		padding-right: 10px;
+	}
+	.slide-item img{
+		width: 250px;
+		height: 100px;
+		border-radius: 5px;
+	}
+	
+	/***********************
+	Body
+	***********************/
+	.section{
+		background: #fff;
+		margin-bottom: 5px;
+		padding: 5px 10px;
+	}
+	.section-title{
+		font-size: 18px;
+		color: #cf2127;
+		font-weight: bold;
+		text-transform: uppercase;
+		padding: 5px 0;
+	}
+	
+	/* tag section */
+	.tag-wrap{
+		overflow-x: scroll;
+		font-size: 0;
+	}
+	.tag-scroll{
+		width: 770px;
+	}
+	.tag-item{
+		float: left;
+		margin: 0 5px 5px 0;
+		overflow: hidden;
+		border-radius: 3px;
+	}
+	.tag-item:nth-child(5n + 1){
+		margin-left: 0;
+	}
+	.tag-item:nth-child(5n){
+		margin-right: 0;
+	}
+	.tag-item img{
+		width: 150px;
+	}
+	
+	/* noibat section */
+	.nb-wrap{
+		overflow-x: scroll;
+	}
+	.nb-scroll{
+		width: 1320px;
+	}
+	.nb-item{
+		float: left;
+		padding: 0 5px 5px 5px;
+		overflow: hidden;
+		max-width: 100px;
+		text-align: center;
+	}
+	.nb-item:nth-of-type(12n+1){
+		padding-left: 0;
+	}
+	.nb-item:nth-of-type(12n){
+		padding-right: 0;
+	}
+	.nb-img{
+		font-size: 0;
+	}
+	.nb-title{
+		
+	}
+	.nb-price{
+		color: #6cbe02;
+		font-weight: bold;
+		font-size: 15px;
+		padding: 3px 0;
+	}
+	
+	/* cua hang section */
+	.section.cuahang{
+		padding-bottom: 0;
+	}
+	.ch-wrap{
+		display: flex;
+		flex-wrap: wrap;
+	}
+	.ch-item{
+		width: 49%;
+		margin: 0 2% 10px 0;
+		box-shadow: 0 0 0 1px #ddd inset;
+		border-radius: 3px;
+		overflow: hidden;
+	}
+	.ch-item a{
+		display: block;
+		overflow: hidden;
+	}
+	.ch-item:nth-child(2n){
+		margin-right: 0;
+	}
+	.ch-content{
+		padding: 6px 6px 0 6px;
+	}
+	.ch-img{
+		font-size: 0;
+	}
+	.ch-img img{
+		width: 100%;
+		height: 100px;
+	}
+	.ch-title{
+		font-size: 15px;
+		font-weight: bold;
+		margin-bottom: 5px;
+	}
+	.ch-address{
+		margin-bottom: 5px;
+		color: gray;
+	}
+	.ch-info span{
+		display: block;
+		margin-bottom: 5px;
+	}
+	.ch-info span.status{
+		position: relative;
+		padding: 0 0 0 20px;
+	}
+	.ch-info span.status:before{
+		display: block;
+	}
+	.ch-info span.status:after{
+		content: "";
+		display: block;
+		height: 10px;
+		width: 10px;
+		border-radius: 100%;
+		position: absolute;
+		top: 3px;
+		left: 2px;
+	}
+	.ch-info span.status[value="1"]:before{
+		content: "Đang hoạt động";
+	}
+	.ch-info span.status[value="1"]:after{
+		background: #6cbe02;
+	}
+	.ch-info span.status[value="0"]:before{
+		content: "Chưa mở cửa";
+	}
+	.ch-info span.status[value="0"]:after{
+		background: #c00;
+	}
+	.ch-info span.feeservice:before{
+		content: attr(value) "% ( phí dịch vụ )";
+		display: block;
+		background: url('../img/money.png') left no-repeat;
+		background-size: 15px;
+		padding: 0 0 0 20px;
+	}
+}
